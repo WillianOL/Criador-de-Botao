@@ -86,8 +86,11 @@ label::before{
 @media (max-width: 720px){
     .button_creator{
         gap: 5px;
+        justify-content: center;
         flex-direction: column-reverse;
         width: 100vw;
+        height: 90vh;
+        padding: 20px 10px;
     }
 
     #controles{
