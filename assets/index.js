@@ -1,9 +1,9 @@
-const controles = document.getElementById("controles");
+const conteinerInputs = document.getElementById("controles");
 const cssText = document.querySelector(".css");
-const btn = document.querySelector(".btn");
+const botao = document.querySelector(".btn");
 
 const handleStyle = {
-    element: btn,
+    element: botao,
     backgroundColor(value) {
         this.element.style.backgroundColor = value;
     },
@@ -41,7 +41,7 @@ function pegarEstilos(event) {
     showCssStyle();
     saveValues(nomeEvento, valor);
 }
-controles.addEventListener("input", pegarEstilos);
+conteinerInputs.addEventListener("input", pegarEstilos);
 
 // Vai armazernar os valores no localStorege, com o nome e o valor.
 function saveValues(nome, valor){
@@ -52,7 +52,7 @@ function setValues() {
     const properts = Object.keys(localStorage);
     properts.forEach((propertie) => {
         handleStyle[propertie](localStorage[propertie])
-        controles.elements[propertie].value = localStorage[propertie];
+        conteinerInputs.elements[propertie].value = localStorage[propertie];
     })
 
     showCssStyle();
@@ -61,5 +61,5 @@ setValues();
 
 function showCssStyle() {
     cssText.innerHTML =
-        "<span>" + btn.style.cssText.split("; ").join(";</span><span>");
+        "<span>" + botao.style.cssText.split("; ").join(";</span><span>");
 }
