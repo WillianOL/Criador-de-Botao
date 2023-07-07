@@ -38,12 +38,12 @@
 	
 <div>
 	<p>Esse projeto foi feito em uma das aulas da plataforma <a href="https://www.origamid.com/">Origamid</a>. Porém com pequenas alterações.</p>
-	<p>A aplicação consiste em uma sidbar com opções de estilização CSS que se aplicam ao botão a direita. Enquanto o usuário vai escolhendo os estilos, o botão vai alterando em tempo real. E ao mesmo tempo, os estilos que foram aplicados ao botão serão mostrados ao usuário no painel do CSS, em forma de código. Servindo como um facilidador de estilos CSS.</p>
+	<p>A aplicação consiste em uma sidebar com opções de estilização CSS que se aplicam ao botão a direita. Enquanto o usuário vai escolhendo os estilos, o botão vai alterando em tempo real. E ao mesmo tempo, os estilos que foram aplicados ao botão serão mostrados ao usuário no painel do CSS, em forma de código. Servindo como um facilidador de estilos CSS.</p>
  <p>Nesse projeto, foram usados:</p>
  <ul>
-  <li>localStorage - armazena os estilos que o usuário colocou na maquina.</li>
-  <li>objetos com métodos - funções em objetos que aplicam os estilos ao botão.</li>
-  <li>Interação entre o HTML e JavaScript - Names dos inputs são pegos com JavaScript para manipulação dos estilos.</li>
+  <li><strong>localStorage</strong> - armazena os estilos que o usuário colocou na maquina.</li>
+  <li><strong>objetos com métodos</strong> - funções em objetos que aplicam os estilos ao botão.</li>
+  <li><strong>Interação entre o HTML e JavaScript</strong> - Names dos inputs são pegos com JavaScript para manipulação dos estilos.</li>
  </ul>
 </div>
 
@@ -53,3 +53,78 @@
 
 
 ## <img align="center" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> JavaScript
+
+### Variáveis importantes
+
+<div>
+	<p>Primeiro, para a criação da aplicação foram definidas variáveis que seram importantes para sua construção. São elas:</p>
+	<ul>
+		<li><strong>conteinerInputs</strong> - conteiner da sidebar onde ficam os inputs.</li>
+		<li><strong>cssText</strong> - conteiner onde ficaram os códigos CSS.</li>
+		<li><strong>botao</strong> - botão que será aplicado os estilos.</li>
+	</ul>
+</div>
+
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/6d97c4ec-8d5e-4b01-ad46-d518a18536d6" width="700px">
+</div>
+
+&nbsp;
+&nbsp;
+
+
+### Lógica para a aplicação dos estilos
+<div>
+	<p>No HTML, todos os inputs da sidebar possuem os names de acordo com o modo de aplicação de estilos CSS com JavaScript. Por exemplo, o input de color possui o name "backgroundColor" pois é assim que se modifica uma propriedade CSS com JavaScript. A partir disso, no JavaScript são pegos os names dos inputs na função <strong>pegarEstilos</strong>.</p>
+</div>
+
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/05cde239-4f42-48b2-896a-79bb9545a5d7" width="700px">
+</div>
+
+### Pegar e aplicar os estilos CSS
+
+<div>
+	<p>Para pegar os valores dos inputs e os names, no <strong>conteinerInputs</strong> foi criada uma função com evento de input chamada <strong>pegarEstilos</strong>. Nela, primeiramente foram criadas duas constantes: <strong>nomeEvento</strong> que pega o name de cada input, e <strong>valor</strong> que pega os values dos inputs.</p>
+	<p>Posteriormente, no objeto <strong>handleStyle</strong> é acessado o método usando o [nomeEvento] e executando o método passando como argumento o (valor).</p>
+</div>
+
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/0eeb1793-9a9a-4c6b-808f-5ce3f52bf5fd" width="700px">
+</div>
+
+&nbsp;
+
+<div>
+	<p>No objeto <strong>handleStyle</strong> foi definida uma propriedade chamada <strong>element</strong> que armazena a constante <strong>botao</strong>(botão que vai ser personalizado). Depois, para cada tipo de estilização CSS, foi criado um método diferente no objeto.</p>
+	<p>Funcionando dessa forma, por exemplo: Quando o usuário modificar o input da altura do botão, vai ativar a função "pegarEstilos". Na função, vai pegar o name do input, que no caso é height, e o valor escolhido da altura pelo usuário. Esses valores são passados no handleStyle, acessando o método height e executando com o valor. Em cada método, o this.element(botão) é modificado através do objeto style com o que vai ser modificado.</p>
+</div>
+
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/6d726e87-9a18-4144-ba8e-801bf6ac4e3a" width="700px">
+</div>
+
+### Salvar alterações e aplicar alterações salvas
+
+<div>
+	<p>Para salvar as estilizações feitas, na função <strong>pegarEstilos</strong> é executada a função <strong>saveValues</strong>, passando como argumentos o <strong>nomeEvento e valor.</strong></p>
+</div>
+
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/55620b01-b549-4d59-8132-d9911009e921" width="700px">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
