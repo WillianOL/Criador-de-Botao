@@ -46,8 +46,8 @@ select{
 
 .css{
     font-family: monospace;
-    color: black;
-    margin-top: 40px;
+    color: rgb(59, 154, 221);
+    margin-top: 25px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -75,6 +75,33 @@ label::before{
     left: -13px;
     top: 8px;
     background-color: rgb(12, 127, 210);
+}
+
+.resultado{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+}
+
+.resultado pre{
+    width: 95%;
+    min-height: 60%;
+    background-color: rgb(11, 11, 36);
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.resultado pre::before{
+    content: "CSS";
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: absolute;
+    font-family: "Open Sans", monospace;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 950px){

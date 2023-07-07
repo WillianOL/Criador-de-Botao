@@ -41,6 +41,7 @@ function pegarEstilos(event) {
     showCssStyle();
     saveValues(nomeEvento, valor);
 }
+controles.addEventListener("input", pegarEstilos);
 
 // Vai armazernar os valores no localStorege, com o nome e o valor.
 function saveValues(nome, valor){
@@ -62,5 +63,3 @@ function showCssStyle() {
     cssText.innerHTML =
         "<span>" + btn.style.cssText.split("; ").join(";</span><span>");
 }
-
-controles.addEventListener("input", pegarEstilos);
