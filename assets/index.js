@@ -4,14 +4,14 @@ const botao = document.querySelector(".btn");
 
 const handleStyle = {
     element: botao,
+    height(value) {
+        this.element.style.height = value + "px";
+    },
     backgroundColor(value) {
         this.element.style.backgroundColor = value;
     },
     color(value) {
         this.element.style.color = value;
-    },
-    height(value) {
-        this.element.style.height = value + "px";
     },
     width(value) {
         this.element.style.width = value + "px";
@@ -38,8 +38,8 @@ function pegarEstilos(event) {
     const valor = event.target.value;
 
     handleStyle[nomeEvento](valor);
-    showCssStyle();
     saveValues(nomeEvento, valor);
+    showCssStyle();
 }
 conteinerInputs.addEventListener("input", pegarEstilos);
 
