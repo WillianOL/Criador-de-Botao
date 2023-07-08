@@ -14,7 +14,7 @@
 ## Ferramentas utilizadas🛠️
 
 <div>
-	<p>Para a elaboração do projeto, foram usadas as tecnologias: </p>
+	<p>Para a elaboração do projeto, foram usadas as tecnologias:</p>
 </div>
 
 <ul>
