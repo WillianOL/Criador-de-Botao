@@ -147,12 +147,26 @@
 	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/b7cd9770-318b-4334-9a7e-2018aa8dcc53" width="700px">
 </div>
 
+### Mostrar código CSS
 
+<div>
+	<p>Para pegar os estilos CSS e mostra-los em forma de código, foi criada uma função chamada showCssStyle. Na função, e feito um innerHTML na constante cssText(local onde vai ser colocado os códigos). Abrindo e fechando um span, é concatenado o seguinte código: <strong>botao.style.cssText;</strong> Com a propriedade cssText do objeto style, é pego todos os estilos que estão aplicados no botão. Essa interação <strong>retorna um array com os estilos, com o método split é retornado uma string excluindo o ";".</strong> E com o método <strong>join</strong> colocar o ";" novamente, e fecha e abre os spans novamente.</p>
+</div>
 
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/b56caca0-6f59-48da-a45f-30b5045686a6" width="700px">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/c05fc284-53b9-4783-b4a9-ad1fdb8ab5c1" width="500px">
+</div>
 
+&nbsp;
 
+<div>
+	<p>A função é executada dentro da função <strong>setValues()</strong>(que seta os valores salvos no localStorage) pois assim, quando os valores forem setados vai mostrar o código CSS.</p>
+</div>
 
-
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/013cee85-a028-41ea-bbad-bae20852b087" width="700px">
+</div>
 
 
 
