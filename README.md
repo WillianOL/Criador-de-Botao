@@ -111,11 +111,41 @@
 </div>
 
 <div align="center">
-	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/55620b01-b549-4d59-8132-d9911009e921" width="700px">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/c48af29f-c370-4b00-9770-3e84f2ee9ddf" width="700px">
 </div>
 
+&nbsp;
 
+<div>
+	<p>Na função, usando o <strong>localStorage</strong>, são armazenadas as estilizações utilizando os parâmetros passados. Passando a chave usando o <strong>[nome]</strong> e a chave recebendo o <strong>valor</strong> dela. Assim, salvando as estilizações.</p>
+</div>
 
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/5c614c4b-41af-4ee9-a201-18e99d130a55" width="700px">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/ef225b5b-aa14-4e6e-b893-79b534bb3a52" width="700px">
+</div>
+
+&nbsp;
+
+<div>
+	<p>Para aplicar as alterações já salvas no localStorage, foi criada uma função chamada <strong>setValues</strong>. Nela, é declarada a constante <strong>properts</strong> que armazena as chaves do localStorage que estão salvas, <strong>isso feito com o Object nativo com o método keys(). Armazenando em forma de array.</strong></p>
+</div>
+
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/3c62ffa1-5730-42cc-b7aa-080da33a497f" width="700px">
+</div>
+
+&nbsp;
+
+<div>
+	<p>Como o que é armazenado é um array, foi usado o método forEach com uma função callback para cada item da array, com o parâmetro propertie. Dentro dela, temos o objeto handleStyle sendo acessado com o [propertie](acessando o método correspondente a chave do localStorage) e executando com o (localStorag[propertie]) como argumento. Sendo esses os valores das chaves.</p>
+	<p>Depois, é pego no conteinerInputs seus elementos acessados com o [propertie] e definindo seu value com o localStorage[propertie] (valores das chaves).</p>
+	<p>Fazendo assim, as modificações feitas e salvas no localStorage serem aplicadas novamente, caso a página seja fechada ou outros problemas.</p>
+</div>
+
+<div align="center">
+	<img align="center" src="https://github.com/WillianOL/Criador-de-Botao/assets/112639055/b7cd9770-318b-4334-9a7e-2018aa8dcc53" width="700px">
+</div>
 
 
 
